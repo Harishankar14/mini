@@ -1,0 +1,93 @@
+/* Register.css */
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f0f4ff 0%, #e0e7ff 100%); /* Soft gradient background */
+    font-family: 'Poppins', sans-serif; /* Modern, friendly font */
+  }
+  
+  .register-box {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .register-box h2 {
+    color: #2c3e50; /* Dark blue for the heading */
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 600;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #dfe6e9; /* Light border */
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-group input:focus {
+    outline: none;
+    border-color: #6c5ce7; /* Purple accent on focus */
+  }
+  
+  .register-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #6c5ce7; /* Bright purple button */
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .register-btn:hover {
+    background-color: #5a4bcf; /* Slightly darker on hover */
+  }
+  
+  .login-link {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #636e72;
+  }
+  
+  .login-link a {
+    color: #6c5ce7;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .login-link a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Add a subtle animation for the form */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .register-box {
+    animation: fadeIn 0.5s ease-in-out;
+  }
