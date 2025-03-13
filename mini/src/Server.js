@@ -12,11 +12,11 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // MongoDB Connection
-mongoose.connect("mongodb://localhost:27017/Usersdb", {
+mongoose.connect("Interested in knowing ! huh", {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
-.then(() => console.log('MongoDB Connected'))
+.then(() => console.log('Weee haa, Ik how to connect a db'))
 .catch(err => console.log(err));
 
 // User Schema
@@ -27,10 +27,10 @@ const UserSchema = new mongoose.Schema({
 });
 const User = mongoose.model('User', UserSchema);
 
-// Middleware to Authenticate JWT
+//yeee haa jwt less goo 
 const authenticateToken = (req, res, next) => {
     const token = req.headers['authorization']?.split(' ')[1];
-    if (!token) return res.status(401).json({ error: 'Access denied' });
+    if (!token) return res.status(401).json({ error: 'Go and take a jump from cliff' });
 
     jwt.verify(token, 'secretkey', (err, user) => {
         if (err) return res.status(403).json({ error: 'Invalid token' });
@@ -51,9 +51,9 @@ app.post('/register', async (req, res) => {
 
         const salt = await bcrypt.genSalt(10);
         const hashedPassword = await bcrypt.hash(password, salt);
-        const newUser = new User({ email, password: hashedPassword, username: username || '' }); // Default to empty string if no username
+        const newUser = new User({ email, password: hashedPassword, username: username }); // i used here hashed password becuase of the bcrypt. i can't see your passwords, lol :{
         await newUser.save();
-        res.json({ message: 'User registered successfully' });
+        res.json({ message: 'yebadooo, lets go thanks for registering' });
     } catch (err) {
         res.status(500).json({ error: 'Error registering user' });
     }
@@ -88,8 +88,7 @@ const LessonSchema = new mongoose.Schema({
     createdAt: { type: Date, default: Date.now }
   });
   const Lesson = mongoose.model('Lesson', LessonSchema);
-  
-  // Add this route to fetch lessons (protected with JWT)
+
   app.get('/lessons', authenticateToken, async (req, res) => {
     try {
       const lessons = await Lesson.find();
@@ -98,7 +97,6 @@ const LessonSchema = new mongoose.Schema({
       res.status(500).json({ error: 'Error fetching lessons' });
     }
   });
-// Test Protected Route
 app.get('/dashboard', authenticateToken, (req, res) => {
     res.json({ message: `Welcome, user ${req.user.id}!` });
 });
