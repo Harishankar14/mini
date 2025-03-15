@@ -1,0 +1,116 @@
+/* client/src/components/Lessons.css */
+.lessons-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .lessons-container h2 {
+    color: #2c3e50;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .lesson-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .lesson-item {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .lesson-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    background-color: #f0f4ff;
+  }
+  
+  .lesson-icon-wrapper {
+    margin-right: 15px;
+  }
+  
+  .lesson-icon {
+    font-size: 24px;
+    color: #6c5ce7; /* Purple icon color */
+  }
+  
+  .lesson-info {
+    flex: 1;
+  }
+  
+  .lesson-info h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #2c3e50;
+    font-weight: 600;
+  }
+  
+  .lesson-info p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #636e72;
+  }
+  
+  .difficulty-badge {
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  
+  .difficulty-badge.easy {
+    background-color: #00b894;
+    color: #ffffff;
+  }
+  
+  .difficulty-badge.medium {
+    background-color: #f39c12;
+    color: #ffffff;
+  }
+  
+  .difficulty-badge.hard {
+    background-color: #ff4757;
+    color: #ffffff;
+  }
+  
+  .no-lessons {
+    text-align: center;
+    color: #636e72;
+    font-size: 16px;
+  }
+  
+  .loading {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 16px;
+  }
+  
+  /* Animation for lesson items */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .lesson-item {
+    animation: fadeInUp 0.3s ease-in-out;
+    animation-delay: calc(var(--index) * 0.1s); /* Staggered animation */
+  }
