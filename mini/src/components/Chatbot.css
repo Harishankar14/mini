@@ -1,0 +1,49 @@
+/* client/src/components/Chatbot.css */
+.rcb-chat-bot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+  
+  .rcb-bot-message {
+    background-color: #6c5ce7 !important; /* Purple bot messages */
+    color: #ffffff !important;
+    border-radius: 10px !important;
+    padding: 10px 15px !important;
+  }
+  
+  .rcb-user-message {
+    background-color: #00b894 !important; /* Green user messages */
+    color: #ffffff !important;
+    border-radius: 10px !important;
+    padding: 10px 15px !important;
+  }
+  
+  .rcb-chat-input {
+    border-radius: 8px !important;
+    border: 2px solid #e0e7ff !important;
+  }
+  
+  .rcb-tooltip {
+    background-color: #4682b4 !important;
+    color: #ffffff !important;
+    border-radius: 8px !important;
+  }
+  
+  /* Add a kid-friendly animation */
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+  
+  .rcb-chat-icon {
+    animation: bounce 2s infinite !important;
+  }
