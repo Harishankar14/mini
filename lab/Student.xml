@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="style.css"?>
+<students>
+    <student>
+        <usn>1VT21CS001</usn>
+        <name>Radhya Sharma</name>
+        <college>Visvesvaraya Institute of Technology</college>
+        <branch>Computer Science</branch>
+        <year>2021</year>
+        <email>radhya.sharma@vtu.edu</email>
+    </student>
+    <student>
+        <usn>1VT21EC002</usn>
+        <name>Arjun Rao</name>
+        <college>Basaveshwara College of Engineering</college>
+        <branch>Electronics and Communication</branch>
+        <year>2021</year>
+        <email>arjun.rao@vtu.edu</email>
+    </student>
+    <student>
+        <usn>1VT21ME003</usn>
+        <name>Sanya Kulkarni</name>
+        <college>RV College of Engineering</college>
+        <branch>Mechanical Engineering</branch>
+        <year>2021</year>
+        <email>sanya.kulkarni@vtu.edu</email>
+    </student>
+</students>
