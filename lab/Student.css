@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f9f9f9;
+    color: #333;
+    text-align: center;
+    margin: 20px;
+}
+
+students {
+    display: block;
+    max-width: 600px;
+    margin: auto;
+    padding: 15px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+student {
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+student:last-child {
+    border-bottom: none;
+}
+
+usn {
+    font-weight: bold;
+    color: #0056b3;
+}
+
+name {
+    font-size: 1.1em;
+    color: #333;
+}
+
+college, branch, year, email {
+    display: block;
+    color: #555;
+}
